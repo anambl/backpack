@@ -39,5 +39,5 @@ jobs:
 
       - name: Check if any README.md files have changed
         id: checkReadmeChanges
-        run: echo ::set-output name=readmeChanged::$(./scripts/check-readme-changes)
+        run: echo "readmeChanged=$(./scripts/check-readme-changes)" >> $GITHUB_OUTPUT
         if: github.ref == 'refs/heads/main'
