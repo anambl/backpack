@@ -39,11 +39,11 @@ jobs:
           nvm use
           npm run typecheck
 
-      - name: Run readme script
-        run: ./scripts/check-readme-changes
-        if: github.ref == 'refs/heads/main'
-
       - name: Check if any README.md files have changed
         id: checkReadmeChanges
         run: echo "readmeChanged=$(./scripts/check-readme-changes)" >> $GITHUB_OUTPUT
         if: github.ref == 'refs/heads/main'
+      
+      - name: Update Supernova docs
+        run: echo "Some files have changed."
+        if: github.ref == 'refs/heads/main' && steps.checkReadmeChanges.outputs.readmeChanged === true

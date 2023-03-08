@@ -1,6 +1,6 @@
 # bpk-component-badge
 
-> Backpack badge component.
+> Backpack badge component.!!
 
 ## Installation
 
