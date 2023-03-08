@@ -5,7 +5,7 @@ const { exec } = require('child_process');
 
 const execAsync = promisify(exec);
 
-const command = 'git --no-pager diff --name-only HEAD^';
+const command = 'git --no-pager diff --name-only HEAD\^';
 
 
 const init = async () => {
