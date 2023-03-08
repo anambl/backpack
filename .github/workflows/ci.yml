@@ -46,4 +46,4 @@ jobs:
       
       - name: Update Supernova docs
         run: echo "Some files have changed."
-        if: github.ref == 'refs/heads/main' && steps.checkReadmeChanges.outputs.readmeChanged === true
+        if: github.ref == 'refs/heads/main' && steps.checkReadmeChanges.outputs.readmeChanged == 'true'
