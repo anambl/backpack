@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+
+const { promisify } = require('util');
+const { exec } = require('child_process');
+
+const execAsync = promisify(exec);
+
+const command = 'git --no-pager diff --name-only HEAD^';
+
+
+const init = async () => {
+  const { stdout } = await execAsync(command, {
+    cwd: process.cwd(),
+  });
+
+  const changedFiles = stdout
+    .trim()
+    .split('\n')
+    .filter(file => file.endsWith('README.md'));
+
+  if (changedFiles.length) {
+    console.log(`${changedFiles.length} files have changed!`);
+    return true;
+  }
+
+  console.log('No files have changed!');
+  return false;
+};
+
+init();

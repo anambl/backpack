@@ -132,3 +132,8 @@ jobs:
             })
         env:
           PR_NUMBER: ${{ github.event.pull_request.number }}
+
+      - name: Check if any README.md files have changed
+        id: checkReadmeChanges
+        run: echo "readmeChanged=$(./scripts/check-readme-changes)" >> $GITHUB_OUTPUT
+        if: github.ref == 'refs/heads/main'
