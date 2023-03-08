@@ -1,6 +1,6 @@
 # bpk-component-accordion
 
-> Backpack accordion component.
+> Backpack accordion component. some change
 
 ## Installation
 
