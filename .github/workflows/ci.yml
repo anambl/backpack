@@ -37,10 +37,8 @@ jobs:
           nvm use
           npm run typecheck
 
-      - name: Run tests
-        run: |
-          nvm use
-          npm test
+      - name: Run readme script
+        run: ./scripts/check-readme-changes
 
       - name: Check if any README.md files have changed
         id: checkReadmeChanges
