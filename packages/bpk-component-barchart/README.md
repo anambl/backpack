@@ -1,6 +1,6 @@
 # bpk-component-barchart
 
-> Backpack bar chart component.
+> Backpack bar chart component.!!!
 
 ## Installation
 

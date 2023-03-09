@@ -22,14 +22,10 @@ const init = async () => {
     .split('\n')
     .filter(file => file.endsWith('README.md'));
   
-  console.log(changedFiles);
-
   if (changedFiles.length) {
-    console.log(`${changedFiles.length} files have changed!`);
     return true;
   }
 
-  console.log('No files have changed!');
   return false;
 };
 

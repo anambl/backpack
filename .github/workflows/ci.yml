@@ -38,10 +38,6 @@ jobs:
         run: |
           nvm use
           npm run typecheck
-
-      - name: Run readme script
-        run: ./scripts/check-readme-changes
-        if: github.ref == 'refs/heads/main'
       
       - name: Check if any README.md files have changed
         id: checkReadmeChanges
