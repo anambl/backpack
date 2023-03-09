@@ -9,6 +9,7 @@ const command = 'git --no-pager diff --name-only HEAD~1';
 
 
 const init = async () => {
+  let isChanged;
   const { stdout, stderr } = await execAsync(command, {
     cwd: process.cwd(),
   });
@@ -23,10 +24,14 @@ const init = async () => {
     .filter(file => file.endsWith('README.md'));
   
   if (changedFiles.length) {
+    isChanged = true;
     return true;
   }
 
+  isChanged = false;
   return false;
 };
 
-init();
+init().then(
+  isChanged => console.log(isChanged)
+  );
