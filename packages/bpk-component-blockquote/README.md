@@ -1,6 +1,6 @@
 # bpk-component-blockquote
 
-> Backpack blockquote component.
+> Backpack blockquote component.!!
 
 ## Installation
 
