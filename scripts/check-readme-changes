@@ -21,6 +21,8 @@ const init = async () => {
     .trim()
     .split('\n')
     .filter(file => file.endsWith('README.md'));
+  
+  console.log(changedFiles);
 
   if (changedFiles.length) {
     console.log(`${changedFiles.length} files have changed!`);

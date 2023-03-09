@@ -1,6 +1,6 @@
 # bpk-component-banner-alert
 
-> Backpack banner alert component.!!!
+> Backpack banner alert component.
 
 ## Installation
 
